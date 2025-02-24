@@ -47,7 +47,7 @@ const App = () => {
             required={true}
             id="numbers"
             type="text"
-            placeholder="Entrez vos nombres ici ..."
+            placeholder="Ex : 2,59,18,290"
             className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={data}
             onChange={(e) => {
@@ -81,13 +81,13 @@ const App = () => {
           <div className="flex justify-between">
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition"
+              className="bg-blue-500 text-white py-2 px-15 rounded-lg hover:bg-blue-600 transition"
             >
               Trier
             </button>
             <button
               type="button"
-              className="bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400 transition"
+              className="bg-gray-300 text-gray-700 py-2 px-15 rounded-lg hover:bg-gray-400 transition"
               onClick={() => {
                 setData("");
                 setError(false);
