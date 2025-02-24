@@ -35,7 +35,7 @@ const App = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-5">
       <div className="bg-white shadow-lg rounded-xl p-6 w-full max-w-sm">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-5">
-          Application sort list
+          Trier vos nombres
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4 ">
           <label htmlFor="numbers" className="block text-gray-700 font-medium">
