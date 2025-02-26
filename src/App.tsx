@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import NumbersSorter from "./assets/components/NumbersSorter";
 
@@ -8,6 +8,8 @@ const App = () => {
   const [error, setError] = useState(false);
   const [isValid, setIsValid] = useState(false);
   const [sortOrder, setSortOrder] = useState("");
+
+  const formRef = useRef(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,7 +39,11 @@ const App = () => {
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-5">
           Triez vos nombres
         </h1>
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-4 ">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="flex flex-col space-y-4 "
+        >
           <label htmlFor="numbers" className="block text-gray-700 font-medium">
             Entrez une liste de nombre, séparez les d'une virgule, sinon les
             deux nombres seront comptés comme un seul :
@@ -93,6 +99,9 @@ const App = () => {
                 setError(false);
                 setIsValid(false);
                 setSortOrder("");
+                if (formRef.current) {
+                  formRef.current.reset();
+                }
               }}
             >
               Reset
