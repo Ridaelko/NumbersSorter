@@ -62,7 +62,7 @@ const App = () => {
           )}
 
           <select
-            className="w-50 mt-3"
+            className="w-28 mt-3"
             name="order"
             id="order"
             required={true}
@@ -92,6 +92,7 @@ const App = () => {
                 setData("");
                 setError(false);
                 setIsValid(false);
+                setSortOrder("");
               }}
             >
               Reset
