@@ -68,7 +68,7 @@ const App = () => {
           )}
 
           <select
-            className="w-28 mt-3"
+            className="w-fit mt-3"
             name="order"
             id="order"
             required={true}
@@ -78,7 +78,7 @@ const App = () => {
             defaultValue=""
           >
             <option value="" disabled={true}>
-              Choisir l'odre de tri
+              Choisir l'ordre de tri
             </option>
             <option value="ascending">Croissant</option>
             <option value="descending">Décroissant</option>
