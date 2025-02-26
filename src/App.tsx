@@ -9,7 +9,7 @@ const App = () => {
   const [isValid, setIsValid] = useState(false);
   const [sortOrder, setSortOrder] = useState("");
 
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
